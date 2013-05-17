@@ -60,18 +60,34 @@
 </script>
 
 <script type="text/x-handlebars" data-template-name="entry">
-    Entry stuff
-    <div>
-      <div>
-        {{name}}
-      </div>
-      <div>
-        {{owner.name}}
-      </div>
-			<div>
-				{{fullText}}
-			</div>
-    </div>
+  <div>
+    {{#if isEditing}}
+      Edit Mode
+      {{partial 'entry/edit'}}
+      <button {{action doneEditing}}>Done</button>
+    {{else}}
+      {{partial 'entry/show'}}
+      <button {{action edit}}>Edit</button>
+    {{/if}}
+  </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="entry/_show">
+  <div>
+    {{name}}
+  </div>
+  <div>
+    {{owner.name}}
+  </div>
+  <div>
+    {{fullText}}
+  </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="entry/_edit">
+  <p>{{view Ember.TextField valueBinding = 'name'}}</p>
+  <p>{{view Ember.TextField valueBinding = 'owner.name'}}</p>
+  <p>{{view Ember.TextField valueBinding = 'fullText'}}</p>
 </script>
   
   <script type="text/x-handlebars" data-template-name="users">

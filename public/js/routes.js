@@ -8,13 +8,6 @@ App.Router.map(function() {
   })
 });
 
-// App.IndexRoute = Ember.Route.extend({
-//   setupController: function(controller) {
-//     // Set the IndexController's `title`
-//     controller.set('title', "My App");
-//   }
-// });
-
 App.UsersRoute = Ember.Route.extend({
     model: function() {
 		return App.User.find();
