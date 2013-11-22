@@ -1,0 +1,5 @@
+<div class="title"><h1><%= @post.title %></h1></div>
+<p class='parsable lead'>
+    <%= @post.content %>
+</p>
+<div class="tags text-info"><%= "".tap do |str| @post.tags.each do |tag| str << tag.tag end end%></div>
