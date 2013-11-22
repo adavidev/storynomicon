@@ -1,4 +1,0 @@
-storynomicon
-============
-
-Collaborative story telling
