@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Post.create([{:content => "this is the text to parse.  Unique name", :title => "unique text"}])
-Tag.create([{:post => Post.first, :tag => "Unique name ref"}])
+Post.create([{:content => "this is the text to parse.  unique name", :title => "unique text"}])
+#Tag.create([{:post => Post.first, :tag => "Unique name"}])
 
 Post.create([{:content => "unique text should make a link to post 1", :title => "unique name"}])
-Tag.create([{:post => Post.first, :tag => "Unique name ref"}])
+#Tag.create([{:post => Post.first, :tag => "Unique text"}])
